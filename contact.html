@@ -13,6 +13,8 @@
         crossorigin="anonymous">
     <!--My CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 
 
     <title>Joe's Portfolio</title>
@@ -30,74 +32,72 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">About
-                        <span class="sr-only">(current)</span>
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="portfolio.html">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link active" href="contact.html">Contact
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        Connect
+                        Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://github.com/jyanglau88">GitHub</a>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="https://www.linkedin.com/in/joelaucpht/">Linkedin</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="https://scratch.mit.edu/projects/205629506/">Scratch Game</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" onsubmit="return googleSearch()">
-                <input id="search-box" class="form-control mr-sm-2" type="search" placeholder="Search Google" aria-label="Search">
-                <button id="googleButton" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="google-search" onClick="window.location.reload();">Search</button>
             </form>
         </div>
     </nav>
 
-
     <!--Jumbotron-->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">About Me</h1>
-            <img src="assets/images/joe-2016.jpg" alt="portrait" id="my-photo">
-            <p class="lead">Hello, my name is Joe. Welcome to my website! I am currently a student at the UC Davis Extension, taking the Coding Bootcamp program. Some of the skills I've learned are HTML, CSS, JavaScript, jQuery, node.js, and more. Please check out my portofio to see examples of my work. Thank you for stopping by!</p>
+            <h1 class="display-4">Contact Me</h1>
+            <p class="lead">Fill out the form below and I will get back to you!</p>
         </div>
     </div>
 
     <!--Content-->
     <div class="container">
         <div class="row">
-            <div class="col-md-4">    
-            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;A good programmer is someone who looks both ways before crossing a one-way street.&quot; - Doug Linder</p>&mdash; Programming Wisdom (@CodeWisdom) <a href="https://twitter.com/CodeWisdom/status/707272393748783104?ref_src=twsrc%5Etfw">March 8, 2016</a></blockquote>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="col-md">
+            <form>
+            <!--name-->
+                <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                </div>
+            <!--email-->
+                <div class="form-group">
+                <label for="exampleFormControlInput2">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+                </div>
+            <!--message-->
+                <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-
-            <div class="col-md-4">
-            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“First, solve the problem. Then, write the code.” – John Johnson</p>&mdash; Programming Wisdom (@CodeWisdom) <a href="https://twitter.com/CodeWisdom/status/978611862580465665?ref_src=twsrc%5Etfw">March 27, 2018</a></blockquote>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-
-
-
-            <div class="col-md-4">
-            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“Code is like humor. When you have to explain it, it’s bad.” – Cory House</p>&mdash; Programming Wisdom (@CodeWisdom) <a href="https://twitter.com/CodeWisdom/status/963044266716037121?ref_src=twsrc%5Etfw">February 12, 2018</a></blockquote>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-
+            <button type="submit" class="btn btn-dark" id="form-submit" onClick="window.location.reload();">Submit</button>
+            </form>
             </div>
         </div>
     </div>
 
     <!--Footer-->
-
     <footer class="footer">
         <div class="container">
             <span class="text-muted">Copyright ©</span>
