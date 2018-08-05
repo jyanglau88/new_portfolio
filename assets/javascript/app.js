@@ -38,3 +38,5 @@ $("#google-search").on("click", ".btn", function() {
 //     window.open('http://www.google.com/search?q=' + searchString);
     
 // });
+
+

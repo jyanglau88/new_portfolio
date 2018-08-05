@@ -62,12 +62,23 @@ body {
     #carousel-desktop{ display: none; }
 }
 
-.carousel-pic {
-    height: 400px;
-    width: 800px;
+.viewable-button {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.842);
+    border-radius: 5px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.card-pic {
-    height: 100px;
-    width: 180px;
+#carouselExampleIndicators {
+    background-color: rgba(0, 0, 0, 0.678);
 }
+
+/*.viewable-button:active {
+    color: whitesmoke;
+}
+
+.viewable-button:visited {
+    color:whitesmoke;
+} */
